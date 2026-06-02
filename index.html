@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muzzammil Sarwar — Full-Stack & AI/LLM Engineer</title>
+  <meta name="description" content="Muzzammil Sarwar — Full-Stack Engineer and AI/LLM Engineer based in Islamabad, Pakistan. Builder of production AI systems, scalable backends, and modern web apps with Next.js, FastAPI, and Python." />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Muzzammil Sarwar — Full-Stack & AI/LLM Engineer" />
+  <meta property="og:description" content="Full-Stack Engineer building production AI systems, scalable backends, and modern web applications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/muzzammil.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            ink: '#0a0e16',
+            panel: '#111722',
+            edge: '#1e2735',
+            accent: '#38bdf8',
+            accent2: '#818cf8',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #0a0e16; }
+    .glow {
+      background: radial-gradient(600px circle at 20% 0%, rgba(56,189,248,0.10), transparent 40%),
+                  radial-gradient(700px circle at 90% 10%, rgba(129,140,248,0.10), transparent 45%);
+    }
+    .card { transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+    .card:hover { transform: translateY(-4px); border-color: rgba(56,189,248,0.5); box-shadow: 0 12px 40px -12px rgba(56,189,248,0.25); }
+    .chip { transition: all .2s ease; }
+    .chip:hover { color: #38bdf8; border-color: rgba(56,189,248,0.5); }
+    .fade { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .fade.show { opacity: 1; transform: none; }
+    ::selection { background: rgba(56,189,248,0.3); }
+  </style>
+</head>
+<body class="font-sans text-slate-300 antialiased glow">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-ink/70 border-b border-edge/60">
+    <nav class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#top" class="font-bold text-white tracking-tight">MS<span class="text-accent">.</span></a>
+      <div class="hidden sm:flex items-center gap-7 text-sm">
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#projects" class="hover:text-white transition">Projects</a>
+        <a href="#experience" class="hover:text-white transition">Experience</a>
+        <a href="#skills" class="hover:text-white transition">Skills</a>
+        <a href="#contact" class="px-4 py-1.5 rounded-full border border-accent/50 text-accent hover:bg-accent hover:text-ink transition">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="max-w-5xl mx-auto px-6">
+
+    <!-- HERO -->
+    <section class="pt-20 pb-16 sm:pt-28 grid sm:grid-cols-[1fr_auto] gap-10 items-center">
+      <div>
+        <p class="font-mono text-accent text-sm mb-4">Hi, my name is</p>
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-[1.05]">Muzzammil Sarwar</h1>
+        <h2 class="mt-3 text-2xl sm:text-3xl font-bold text-slate-400">I build production AI systems &amp; web apps.</h2>
+        <p class="mt-6 max-w-xl text-slate-400 leading-relaxed">
+          Full-Stack &amp; AI/LLM Engineer with <span class="text-white font-semibold">4+ years</span> of experience shipping scalable backends, LLM-powered applications, and modern web products end-to-end &mdash; from architecture to Docker-based deployment and CI/CD. Based in Islamabad, Pakistan. Open to fully remote roles worldwide.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#projects" class="px-5 py-3 rounded-lg bg-accent text-ink font-semibold hover:bg-sky-300 transition">View my work</a>
+          <a href="mailto:muzzammil@umaish.com" class="px-5 py-3 rounded-lg border border-edge text-white font-semibold hover:border-accent hover:text-accent transition">Get in touch</a>
+        </div>
+        <div class="mt-7 flex items-center gap-5 text-sm text-slate-500">
+          <a href="https://github.com/Muzzammil242" target="_blank" rel="noopener" class="hover:text-accent transition">GitHub</a>
+          <span class="text-edge">/</span>
+          <a href="https://linkedin.com/in/muzzammil-sarwar" target="_blank" rel="noopener" class="hover:text-accent transition">LinkedIn</a>
+          <span class="text-edge">/</span>
+          <a href="mailto:muzzammil@umaish.com" class="hover:text-accent transition">muzzammil@umaish.com</a>
+        </div>
+      </div>
+      <div class="justify-self-center sm:justify-self-end">
+        <div class="relative">
+          <div class="absolute -inset-3 rounded-2xl bg-gradient-to-tr from-accent/30 to-accent2/30 blur-xl"></div>
+          <img src="assets/muzzammil.jpg" alt="Muzzammil Sarwar"
+               class="relative w-44 h-44 sm:w-56 sm:h-56 object-cover rounded-2xl border border-edge shadow-2xl" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-16 fade">
+      <h2 class="flex items-center gap-3 text-2xl font-bold text-white mb-6">
+        <span class="font-mono text-accent text-lg">01.</span> About me
+        <span class="flex-1 h-px bg-edge ml-2"></span>
+      </h2>
+      <div class="grid sm:grid-cols-2 gap-8 text-slate-400 leading-relaxed">
+        <div class="space-y-4">
+          <p>I'm an engineer who likes owning features all the way to production. My core is <span class="text-white">Python &amp; FastAPI</span> on the backend and the <span class="text-white">Next.js / React</span> ecosystem on the frontend, with deep hands-on work in LLM-powered apps and autonomous AI agents.</p>
+          <p>Lately I've been building <a href="https://controla-va.com" target="_blank" rel="noopener" class="text-accent hover:underline">Controla-VA</a>, a live SaaS workforce platform &mdash; from the Next.js app and an Electron desktop agent to R2 storage and a CI/CD pipeline deploying to a VPS.</p>
+        </div>
+        <div class="space-y-4">
+          <p>Earlier I engineered an Oracle&rarr;PostgreSQL migration tool, a LightFM recommendation engine powering a live grocery app, and autonomous multi-agent systems with CrewAI &amp; LangChain.</p>
+          <p>I care about reliable, well-documented systems: high-concurrency APIs, sensible schema design, monitoring, and clean rollout/rollback strategies.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-16 fade">
+      <h2 class="flex items-center gap-3 text-2xl font-bold text-white mb-10">
+        <span class="font-mono text-accent text-lg">02.</span> Featured projects
+        <span class="flex-1 h-px bg-edge ml-2"></span>
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- Controla-VA -->
+        <article class="card md:col-span-2 bg-panel border border-edge rounded-xl p-7">
+          <div class="flex items-start justify-between gap-4 flex-wrap">
+            <div>
+              <p class="font-mono text-accent text-xs mb-1">Live SaaS &middot; Flagship product</p>
+              <h3 class="text-xl font-bold text-white">Controla-VA &mdash; Workforce &amp; Time-Tracking Platform</h3>
+            </div>
+            <a href="https://controla-va.com" target="_blank" rel="noopener" class="shrink-0 px-4 py-2 rounded-lg bg-accent/10 text-accent text-sm font-semibold border border-accent/30 hover:bg-accent hover:text-ink transition">Visit live site &rarr;</a>
+          </div>
+          <p class="mt-4 text-slate-400 leading-relaxed">
+            A production employee time-tracking and workforce-productivity platform I lead end-to-end. Built the full Next.js application (admin dashboard + employee panels) on Prisma &amp; PostgreSQL with Auth.js and role-based access, plus a cross-platform <span class="text-slate-200">Electron desktop agent</span> with multi-monitor screenshot capture, idle/activity detection, and an offline pending-queue with idempotent sync. Provisioned Cloudflare R2 storage and a GitHub Actions CI/CD pipeline that deploys Dockerized services to a Hostinger VPS behind Caddy &mdash; fully live in production.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2 font-mono text-xs">
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">Next.js</span>
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">Prisma</span>
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">PostgreSQL</span>
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">Electron</span>
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">Cloudflare R2</span>
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">Docker</span>
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">GitHub Actions</span>
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">Caddy / VPS</span>
+          </div>
+        </article>
+
+        <!-- Box -->
+        <article class="card bg-panel border border-edge rounded-xl p-7">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="font-mono text-accent text-xs mb-1">Live &middot; Recommendation engine</p>
+              <h3 class="text-xl font-bold text-white">Box &mdash; Grocery Recommendations</h3>
+            </div>
+            <a href="https://www.box.com.pk/" target="_blank" rel="noopener" class="shrink-0 px-3 py-2 rounded-lg bg-accent/10 text-accent text-sm font-semibold border border-accent/30 hover:bg-accent hover:text-ink transition">Live &rarr;</a>
+          </div>
+          <p class="mt-4 text-slate-400 leading-relaxed text-sm">
+            A hybrid collaborative + content-based recommendation microservice built with <span class="text-slate-200">LightFM</span> and exposed via FastAPI, powering product discovery and engagement for a live online grocery platform.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2 font-mono text-xs">
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">Python</span>
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">LightFM</span>
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">FastAPI</span>
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">Recommender Systems</span>
+          </div>
+        </article>
+
+        <!-- Migration tool -->
+        <article class="card bg-panel border border-edge rounded-xl p-7">
+          <div>
+            <p class="font-mono text-accent text-xs mb-1">Data engineering</p>
+            <h3 class="text-xl font-bold text-white">Oracle &rarr; PostgreSQL Migration Tool</h3>
+          </div>
+          <p class="mt-4 text-slate-400 leading-relaxed text-sm">
+            An end-to-end database migration tool with both CLI and desktop GUI, written entirely in Python &mdash; DDL extraction, schema transformation, and full data migration, architected for extensibility to other databases (DB2, MySQL) without rewriting core logic.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2 font-mono text-xs">
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">Python</span>
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">Oracle</span>
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">PostgreSQL</span>
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">Schema Design</span>
+          </div>
+        </article>
+
+        <!-- Cold Storage -->
+        <article class="card md:col-span-2 bg-panel border border-edge rounded-xl p-7">
+          <div>
+            <p class="font-mono text-accent text-xs mb-1">AI / ML</p>
+            <h3 class="text-xl font-bold text-white">Smart Cold Storage Dashboard</h3>
+          </div>
+          <p class="mt-4 text-slate-400 leading-relaxed text-sm">
+            Full-stack dashboard for cold-storage automation with real-time temperature monitoring and predictive maintenance. Integrated ML to analyze historical data, forecast temperature trends, and recommend optimal storage conditions to improve energy efficiency.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-2 font-mono text-xs">
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">Python</span>
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">Machine Learning</span>
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">Full-Stack</span>
+            <span class="chip px-2.5 py-1 rounded border border-edge text-slate-400">Forecasting</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="py-16 fade">
+      <h2 class="flex items-center gap-3 text-2xl font-bold text-white mb-10">
+        <span class="font-mono text-accent text-lg">03.</span> Experience
+        <span class="flex-1 h-px bg-edge ml-2"></span>
+      </h2>
+      <div class="space-y-8 border-l border-edge pl-6">
+        <div class="relative">
+          <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-accent"></span>
+          <div class="flex flex-wrap justify-between gap-2">
+            <h3 class="text-white font-semibold">Full-Stack Developer <span class="text-accent">@ Growth Rise Solutions</span></h3>
+            <span class="font-mono text-xs text-slate-500">May 2026 &ndash; Present</span>
+          </div>
+          <p class="mt-2 text-slate-400 text-sm">Leading end-to-end development of Controla-VA: Next.js app, Electron desktop agent, Cloudflare R2, and CI/CD to a Hostinger VPS &mdash; now live in production.</p>
+        </div>
+        <div class="relative">
+          <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-edge"></span>
+          <div class="flex flex-wrap justify-between gap-2">
+            <h3 class="text-white font-semibold">Python / AI Engineer <span class="text-accent">@ Growth Rise Solutions</span></h3>
+            <span class="font-mono text-xs text-slate-500">Dec 2024 &ndash; Apr 2026</span>
+          </div>
+          <p class="mt-2 text-slate-400 text-sm">Built autonomous multi-agent AI systems (CrewAI, LangChain), event-driven n8n automations, and high-concurrency FastAPI backends; containerized and deployed via GitHub Actions.</p>
+        </div>
+        <div class="relative">
+          <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-edge"></span>
+          <div class="flex flex-wrap justify-between gap-2">
+            <h3 class="text-white font-semibold">Software Engineer <span class="text-accent">@ Bitnine Global</span></h3>
+            <span class="font-mono text-xs text-slate-500">Apr 2023 &ndash; Dec 2024</span>
+          </div>
+          <p class="mt-2 text-slate-400 text-sm">Built a Python test-automation framework and an Oracle&rarr;PostgreSQL migration tool with CLI and GUI interfaces.</p>
+        </div>
+        <div class="relative">
+          <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-edge"></span>
+          <div class="flex flex-wrap justify-between gap-2">
+            <h3 class="text-white font-semibold">Full-Stack Developer (MEAN) <span class="text-accent">@ Zepto Systems</span></h3>
+            <span class="font-mono text-xs text-slate-500">Apr 2021 &ndash; Aug 2022</span>
+          </div>
+          <p class="mt-2 text-slate-400 text-sm">Built responsive Angular/AngularJS UIs and Express.js REST APIs with MySQL, integrating Strapi as a headless CMS.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-16 fade">
+      <h2 class="flex items-center gap-3 text-2xl font-bold text-white mb-10">
+        <span class="font-mono text-accent text-lg">04.</span> Skills &amp; tools
+        <span class="flex-1 h-px bg-edge ml-2"></span>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-panel border border-edge rounded-xl p-6">
+          <h3 class="text-white font-semibold mb-3">Languages</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Python, TypeScript, JavaScript, SQL, Bash, C++, Java</p>
+        </div>
+        <div class="bg-panel border border-edge rounded-xl p-6">
+          <h3 class="text-white font-semibold mb-3">AI / LLM</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">LangChain, CrewAI, RAG, AI Agents, Prompt Engineering, OpenAI API, Vector DBs, LightFM</p>
+        </div>
+        <div class="bg-panel border border-edge rounded-xl p-6">
+          <h3 class="text-white font-semibold mb-3">Backend</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">FastAPI, Flask, Node.js, Express.js, REST APIs, Microservices, High-Concurrency Services, Auth</p>
+        </div>
+        <div class="bg-panel border border-edge rounded-xl p-6">
+          <h3 class="text-white font-semibold mb-3">Frontend</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Next.js, React, Angular, Streamlit, Tailwind CSS, Material UI, SSR, SEO</p>
+        </div>
+        <div class="bg-panel border border-edge rounded-xl p-6">
+          <h3 class="text-white font-semibold mb-3">Databases</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">PostgreSQL, MySQL, Prisma, Schema Design, Query Optimization, DB Migration</p>
+        </div>
+        <div class="bg-panel border border-edge rounded-xl p-6">
+          <h3 class="text-white font-semibold mb-3">DevOps &amp; Cloud</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Docker, GitHub Actions, CI/CD, Caddy, VPS, Cloudflare R2, Railway, Linux, Git</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 text-center fade">
+      <p class="font-mono text-accent text-sm mb-3">05. What's next?</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Let's work together</h2>
+      <p class="mt-5 max-w-md mx-auto text-slate-400">I'm open to fully remote full-stack and AI engineering roles. If you have something in mind, my inbox is always open.</p>
+      <a href="mailto:muzzammil@umaish.com" class="inline-block mt-8 px-8 py-4 rounded-lg border border-accent text-accent font-semibold hover:bg-accent hover:text-ink transition">Say hello</a>
+      <div class="mt-10 flex items-center justify-center gap-6 text-sm text-slate-500">
+        <a href="https://github.com/Muzzammil242" target="_blank" rel="noopener" class="hover:text-accent transition">GitHub</a>
+        <a href="https://linkedin.com/in/muzzammil-sarwar" target="_blank" rel="noopener" class="hover:text-accent transition">LinkedIn</a>
+        <a href="tel:+923359348075" class="hover:text-accent transition">+92 335 9348075</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-edge/60 py-8 text-center text-xs text-slate-600 font-mono">
+    Designed &amp; built by Muzzammil Sarwar &middot; Islamabad, Pakistan
+  </footer>
+
+  <script>
+    // reveal-on-scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade').forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>
