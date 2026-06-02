@@ -41,7 +41,7 @@
     body { background: #070912; overflow-x: hidden; }
 
     /* Animated aurora background */
-    .aurora { position: fixed; inset: 0; z-index: -2; overflow: hidden; }
+    .aurora { position: fixed; inset: 0; z-index: -2; overflow: hidden; pointer-events: none; }
     .blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .55; }
     .blob.b1 { width: 50vw; height: 50vw; background: #1d4ed8; top: -10%; left: -10%; animation: drift1 22s ease-in-out infinite; }
     .blob.b2 { width: 45vw; height: 45vw; background: #7c3aed; top: 10%; right: -15%; animation: drift2 26s ease-in-out infinite; }
@@ -51,7 +51,7 @@
     @keyframes drift3 { 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(5vw,-6vh) scale(1.2);} }
 
     /* Grid + noise overlay */
-    .grid-overlay { position: fixed; inset: 0; z-index: -1;
+    .grid-overlay { position: fixed; inset: 0; z-index: -1; pointer-events: none;
       background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
                         linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
       background-size: 48px 48px;
@@ -68,7 +68,7 @@
 
     /* Gradient-border cards with glow on hover */
     .card { position: relative; transition: transform .3s ease; }
-    .card::before { content:""; position:absolute; inset:0; border-radius:1rem; padding:1px;
+    .card::before { content:""; position:absolute; inset:0; border-radius:1rem; padding:1px; pointer-events:none;
       background: linear-gradient(140deg, rgba(56,189,248,.5), rgba(167,139,250,.35), rgba(244,114,182,.2));
       -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
       -webkit-mask-composite: xor; mask-composite: exclude;
