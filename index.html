@@ -3,639 +3,399 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muzzammil Sarwar — Senior Full-Stack Engineer (TypeScript · AI)</title>
-  <meta name="description" content="Muzzammil Sarwar, senior full-stack engineer in Islamabad, Pakistan. Builds production platforms end to end with TypeScript, NestJS, Next.js, PostgreSQL and Electron, with AI features that ship. Open to remote roles." />
-
-  <meta property="og:title" content="Muzzammil Sarwar — Senior Full-Stack Engineer (TypeScript · AI)" />
-  <meta property="og:description" content="Sole engineer behind a production workforce platform: web portals, NestJS API, a desktop agent for Windows, macOS and Linux, a finance platform, AI features and infrastructure. Six case studies inside." />
+  <title>Muzzammil Sarwar | Senior Full-Stack Engineer</title>
+  <meta name="description" content="Muzzammil Sarwar, senior full-stack engineer and system architect in Islamabad. Product platforms, AI systems and data tooling in TypeScript and Python. Open to remote roles." />
+  <meta property="og:title" content="Muzzammil Sarwar | Senior Full-Stack Engineer" />
+  <meta property="og:description" content="Product platforms, AI systems and data tooling in TypeScript and Python. Case studies, projects and CV." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/muzzammil.jpg" />
+  <meta property="og:image" content="assets/portrait.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231b1b1a'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23f7f5f0' text-anchor='middle'%3EMS%3C/text%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            display: ['Sora', 'system-ui', 'sans-serif'],
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            ink: '#070912',
-            panel: 'rgba(255,255,255,0.03)',
-            edge: 'rgba(255,255,255,0.08)',
-            accent: '#38bdf8',
-            accent2: '#a78bfa',
-            accent3: '#f472b6',
-          },
-        },
-      },
-    };
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
   <style>
-    html { scroll-behavior: smooth; }
-    body { background: #070912; overflow-x: hidden; }
-
-    /* Animated aurora background */
-    .aurora { position: fixed; inset: 0; z-index: -2; overflow: hidden; pointer-events: none; }
-    .blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .55; }
-    .blob.b1 { width: 50vw; height: 50vw; background: #1d4ed8; top: -10%; left: -10%; animation: drift1 22s ease-in-out infinite; }
-    .blob.b2 { width: 45vw; height: 45vw; background: #7c3aed; top: 10%; right: -15%; animation: drift2 26s ease-in-out infinite; }
-    .blob.b3 { width: 40vw; height: 40vw; background: #db2777; bottom: -20%; left: 25%; opacity: .35; animation: drift3 30s ease-in-out infinite; }
-    @keyframes drift1 { 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(8vw,6vh) scale(1.15);} }
-    @keyframes drift2 { 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(-7vw,8vh) scale(1.1);} }
-    @keyframes drift3 { 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(5vw,-6vh) scale(1.2);} }
-
-    /* Grid + noise overlay */
-    .grid-overlay { position: fixed; inset: 0; z-index: -1; pointer-events: none;
-      background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
-      -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+    :root {
+      --bg: #f7f5f0;
+      --ink: #1b1b1a;
+      --muted: #5e5c56;
+      --faint: #8a877f;
+      --rule: #dcd8ce;
+      --accent: #a8401a;
+      --serif: "Newsreader", Georgia, "Times New Roman", serif;
+      --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #151514;
+        --ink: #ebe9e3;
+        --muted: #a9a69e;
+        --faint: #7c7a73;
+        --rule: #2e2d2a;
+        --accent: #e08a5f;
+      }
     }
 
-    .gradient-text {
-      background: linear-gradient(110deg,#38bdf8 0%,#a78bfa 45%,#f472b6 90%);
-      -webkit-background-clip: text; background-clip: text; color: transparent;
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 400 16px/1.65 var(--sans);
+      -webkit-font-smoothing: antialiased;
     }
+    a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent); text-decoration-color: currentColor; }
+    p { margin: 0 0 1em; }
+    ul { margin: 0; padding: 0; }
+    h1, h2, h3 { margin: 0; font-weight: 500; }
 
-    .glass { background: rgba(255,255,255,0.035); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
 
-    /* Gradient-border cards with glow on hover */
-    .card { position: relative; transition: transform .3s ease; }
-    .card::before { content:""; position:absolute; inset:0; border-radius:1rem; padding:1px; pointer-events:none;
-      background: linear-gradient(140deg, rgba(56,189,248,.5), rgba(167,139,250,.35), rgba(244,114,182,.2));
-      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-      -webkit-mask-composite: xor; mask-composite: exclude;
-      opacity:0; transition: opacity .3s ease; }
-    .card:hover { transform: translateY(-6px); }
-    .card:hover::before { opacity: 1; }
-    .card:hover { box-shadow: 0 24px 60px -20px rgba(56,189,248,.35); }
+    /* Header */
+    .top { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; padding: 28px 0 0; }
+    .top .mark { font: 500 18px/1 var(--serif); text-decoration: none; }
+    .top nav { display: flex; gap: 22px; flex-wrap: wrap; font-size: 14px; }
+    .top nav a { text-decoration: none; color: var(--muted); }
+    .top nav a:hover { color: var(--ink); }
 
-    .chip { transition: all .2s ease; }
-    .chip:hover { color:#fff; border-color: rgba(56,189,248,.6); background: rgba(56,189,248,.08); }
+    /* Intro */
+    .intro { display: grid; grid-template-columns: 1fr 200px; gap: 56px; align-items: start; padding: 72px 0 64px; }
+    .intro h1 { font: 500 clamp(40px, 6vw, 60px)/1.05 var(--serif); letter-spacing: -0.01em; }
+    .intro .role { margin: 14px 0 26px; font: 400 clamp(19px, 2.2vw, 22px)/1.4 var(--serif); font-style: italic; color: var(--muted); }
+    .intro .lede { max-width: 60ch; font-size: 17px; }
+    .intro .where { color: var(--muted); font-size: 15px; }
+    .links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 22px; font-size: 15px; font-weight: 500; }
+    .intro img { width: 200px; height: auto; display: block; border-radius: 2px; filter: saturate(0.9); }
 
-    .fade { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
-    .fade.show { opacity: 1; transform: none; }
+    /* Sections: label column + content column */
+    .sec { display: grid; grid-template-columns: 180px 1fr; gap: 40px; padding: 56px 0; border-top: 1px solid var(--rule); }
+    .sec > h2 { font: 500 12px/1.6 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); padding-top: 6px; }
+    .sec-intro { color: var(--muted); max-width: 62ch; margin-bottom: 36px; }
 
-    /* Marquee */
-    .marquee { display:flex; gap:3rem; width:max-content; animation: scroll 40s linear infinite; }
-    @keyframes scroll { to { transform: translateX(-50%); } }
-    .marquee-wrap:hover .marquee { animation-play-state: paused; }
+    .mono { font-family: var(--mono); font-size: 13px; color: var(--faint); }
+    .stack { font-family: var(--mono); font-size: 12.5px; color: var(--faint); margin-top: 10px; }
 
-    .btn-glow { box-shadow: 0 8px 30px -8px rgba(56,189,248,.6); }
-    ::selection { background: rgba(167,139,250,.4); color:#fff; }
+    /* Work */
+    .item { padding: 0 0 36px; margin-bottom: 36px; border-bottom: 1px solid var(--rule); }
+    .item:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+    .item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+    .item h3 { font: 500 24px/1.25 var(--serif); }
+    .item p { max-width: 64ch; }
+    .facets { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 32px; margin: 22px 0 18px; list-style: none; }
+    .facets li { font-size: 15px; color: var(--muted); }
+    .facets b { display: block; color: var(--ink); font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+    .next { font-size: 15px; color: var(--muted); border-left: 2px solid var(--accent); padding-left: 14px; max-width: 64ch; }
+    .next b { color: var(--ink); font-weight: 600; }
 
-    @media (prefers-reduced-motion: reduce) {
-      .blob, .marquee { animation: none; }
-      .fade { opacity:1; transform:none; }
+    /* Case studies */
+    .case { padding-bottom: 40px; margin-bottom: 40px; border-bottom: 1px solid var(--rule); }
+    .case:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+    .case h3 { font: 500 26px/1.25 var(--serif); margin: 6px 0 18px; max-width: 30ch; }
+    .case dl { margin: 0; display: grid; grid-template-columns: 92px 1fr; gap: 10px 20px; max-width: 72ch; }
+    .case dt { font: 500 12px/1.9 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--faint); }
+    .case dd { margin: 0; }
+    .code { font-family: var(--mono); font-size: 0.9em; }
+
+    /* Experience */
+    .job { display: grid; grid-template-columns: 150px 1fr; gap: 20px; padding-bottom: 30px; margin-bottom: 30px; border-bottom: 1px solid var(--rule); }
+    .job:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+    .job h3 { font: 600 16px/1.4 var(--sans); }
+    .job h3 span { font-weight: 400; color: var(--muted); }
+    .job ul { margin-top: 8px; padding-left: 18px; color: var(--muted); font-size: 15px; }
+    .job li { margin-bottom: 4px; }
+    .job .mono { padding-top: 2px; }
+
+    /* Skills */
+    .skills { margin: 0; display: grid; grid-template-columns: 150px 1fr; gap: 12px 20px; }
+    .skills dt { font-weight: 600; font-size: 15px; }
+    .skills dd { margin: 0; color: var(--muted); font-size: 15px; }
+
+    /* Contact */
+    .contact p { font: 400 clamp(22px, 3vw, 28px)/1.35 var(--serif); max-width: 30ch; }
+    .contact .links { font-family: var(--sans); }
+
+    footer { border-top: 1px solid var(--rule); padding: 28px 0 40px; font-size: 13px; color: var(--faint); }
+
+    @media (max-width: 760px) {
+      .top nav { gap: 14px; font-size: 13px; }
+      .intro { grid-template-columns: 1fr; gap: 32px; padding: 48px 0 44px; }
+      .intro img { width: 150px; order: -1; }
+      .sec { grid-template-columns: 1fr; gap: 18px; padding: 44px 0; }
+      .facets { grid-template-columns: 1fr; }
+      .case dl { grid-template-columns: 1fr; gap: 2px; }
+      .case dd { margin-bottom: 12px; }
+      .job, .skills { grid-template-columns: 1fr; gap: 4px; }
+      .skills dd { margin-bottom: 10px; }
     }
   </style>
 </head>
-<body class="font-sans text-slate-300 antialiased selection:text-white">
+<body>
+  <div class="wrap">
 
-  <div class="aurora"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
-  <div class="grid-overlay"></div>
+    <header class="top">
+      <a class="mark" href="#">Muzzammil Sarwar</a>
+      <nav aria-label="Sections">
+        <a href="#work">Work</a>
+        <a href="#case-studies">Case studies</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <!-- NAV -->
-  <header class="sticky top-0 z-50">
-    <nav class="max-w-6xl mx-auto mt-4 px-5 glass rounded-2xl h-14 flex items-center justify-between">
-      <a href="#top" class="font-display font-extrabold text-white tracking-tight text-lg">Muzzammil<span class="gradient-text">.</span></a>
-      <div class="hidden sm:flex items-center gap-7 text-sm font-medium">
-        <a href="#projects" class="text-slate-400 hover:text-white transition">Work</a>
-        <a href="#case-studies" class="text-slate-400 hover:text-white transition">Case studies</a>
-        <a href="#experience" class="text-slate-400 hover:text-white transition">Experience</a>
-        <a href="#skills" class="text-slate-400 hover:text-white transition">Skills</a>
-        <a href="#contact" class="px-4 py-1.5 rounded-full bg-white/5 border border-edge text-white hover:border-accent hover:text-accent transition">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="top" class="max-w-6xl mx-auto px-5">
-
-    <!-- HERO -->
-    <section class="pt-16 sm:pt-24 pb-20 grid lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
-      <div>
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-medium text-slate-300 mb-7">
-          <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
-          </span>
-          Available for remote work
+    <main>
+      <section class="intro">
+        <div>
+          <h1>Muzzammil Sarwar</h1>
+          <p class="role">Senior full-stack engineer and system architect</p>
+          <p class="lede">I design software systems end to end and build them quickly with AI-assisted development, keeping tests and code review as the quality gate. Over five years I've worked on product platforms, AI systems and data tooling in TypeScript and Python.</p>
+          <p class="lede">Right now I'm the sole engineer on Controla-VA, a workforce platform with five web portals, a NestJS API and a desktop agent running on about 50 machines.</p>
+          <p class="where">Islamabad, Pakistan. Open to remote roles.</p>
+          <div class="links">
+            <a href="mailto:muzzammil@umaish.com">Email</a>
+            <a href="https://github.com/Muzzammil242" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/muzzammil-sarwar" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="assets/Muzzammil_Sarwar_Resume.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+          </div>
         </div>
+        <img src="assets/portrait.jpg" alt="Portrait of Muzzammil Sarwar" width="200" height="267" />
+      </section>
 
-        <h1 class="font-display text-5xl sm:text-7xl font-extrabold text-white tracking-tight leading-[1.02]">
-          Muzzammil<br><span class="gradient-text">Sarwar</span>
-        </h1>
-        <p class="mt-5 font-display text-xl sm:text-2xl font-semibold text-slate-300">
-          Senior Full-Stack Engineer · TypeScript &amp; AI
-        </p>
-        <p class="mt-5 max-w-xl text-slate-400 leading-relaxed">
-          I build <span class="text-white">production software end to end</span>: web portals, APIs, desktop agents and the infrastructure that runs them, with AI features that actually ship. I'm currently the sole engineer on a live workforce platform, with a desktop agent for Windows, macOS and Linux. 5 years across TypeScript, NestJS, Next.js, PostgreSQL and Python.
-        </p>
+      <section class="sec" id="work">
+        <h2>Work</h2>
+        <div>
+          <article class="item">
+            <div class="item-head">
+              <h3>Controla-VA</h3>
+              <span class="mono">Growth Rise Solutions · 2026 · <a href="https://controla-va.com" target="_blank" rel="noopener">controla-va.com</a></span>
+            </div>
+            <p>Time tracking, productivity monitoring, recruiting and finance for a managed staffing company, in one platform. I'm the only engineer, covering architecture, code, infrastructure and production support.</p>
+            <ul class="facets">
+              <li><b>Platform</b>Five role-based Next.js portals on a NestJS API with PostgreSQL and Prisma. Office-scoped access control, an audit trail, and Zoom meetings with AI summaries.</li>
+              <li><b>Desktop agent</b>Electron, on about 50 workstations in Asia and Latin America. Offline-first sync, screenshots, idle detection and silent auto-updates. macOS and Linux ports in progress.</li>
+              <li><b>AI</b>RAG candidate matching on pgvector, Gemini vision classification of screenshots, and LLM parsing of invoices and CVs.</li>
+              <li><b>Finance</b>Reconciles multi-currency bank and payment-provider statements into a three-tier P&amp;L, with a grounded AI assistant.</li>
+            </ul>
+            <p class="next"><b>Next:</b> in-app messaging with Hebrew–Urdu translation of text and voice, and an AI voice interviewer for first-round candidate screening.</p>
+            <p class="stack">Next.js · NestJS · PostgreSQL · pgvector · Prisma · Redis · Electron · C# · OpenAI · Gemini · Docker · Cloudflare</p>
+          </article>
 
-        <div class="mt-9 flex flex-wrap gap-3">
-          <a href="#case-studies" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-accent to-accent2 text-ink font-semibold btn-glow hover:scale-[1.03] transition">Read the case studies →</a>
-          <a href="assets/Muzzammil_Sarwar_Resume.pdf" target="_blank" rel="noopener" class="px-6 py-3.5 rounded-xl glass text-white font-semibold hover:border-accent hover:text-accent transition">Download CV</a>
+          <article class="item">
+            <div class="item-head">
+              <h3>Box</h3>
+              <span class="mono">Growth Rise Solutions · <a href="https://www.box.com.pk/" target="_blank" rel="noopener">box.com.pk</a></span>
+            </div>
+            <p>A hybrid collaborative and content-based recommender built with LightFM and served through FastAPI. It powers product discovery in a live grocery app.</p>
+            <p class="stack">Python · LightFM · FastAPI</p>
+          </article>
+
+          <article class="item">
+            <div class="item-head">
+              <h3>Oracle-to-PostgreSQL migration tool</h3>
+              <span class="mono">Bitnine Global</span>
+            </div>
+            <p>A Python migration tool with a CLI and a desktop GUI, covering DDL extraction, schema transformation and data migration. Its design lets DB2 and MySQL be added without rewriting the core.</p>
+            <p class="stack">Python · Oracle · PostgreSQL</p>
+          </article>
+
+          <article class="item">
+            <div class="item-head">
+              <h3>Smart Cold Storage Dashboard</h3>
+              <span class="mono">Project</span>
+            </div>
+            <p>Real-time temperature monitoring for cold-storage automation. ML models forecast temperature trends and recommend storage conditions, supporting predictive maintenance and lower energy use.</p>
+            <p class="stack">Python · Machine learning · Forecasting</p>
+          </article>
+
+          <article class="item">
+            <div class="item-head">
+              <h3>Kids Learning Platform</h3>
+              <span class="mono">Project</span>
+            </div>
+            <p>An eye-tracking model measures engagement in real time, and a fine-tuned GPT-3 model adapts the learning content to each child. I built the front end, the back end and the model APIs.</p>
+            <p class="stack">Computer vision · Fine-tuned GPT-3 · REST APIs</p>
+          </article>
         </div>
+      </section>
 
-        <div class="mt-8 flex items-center gap-5 text-sm text-slate-500">
-          <a href="https://github.com/Muzzammil242" target="_blank" rel="noopener" class="hover:text-accent transition">GitHub</a>
-          <span class="text-edge">•</span>
-          <a href="https://linkedin.com/in/muzzammil-sarwar" target="_blank" rel="noopener" class="hover:text-accent transition">LinkedIn</a>
-          <span class="text-edge">•</span>
-          <a href="mailto:muzzammil@umaish.com" class="hover:text-accent transition">Email</a>
+      <section class="sec" id="case-studies">
+        <h2>Case studies</h2>
+        <div>
+          <p class="sec-intro">Problems from across my work, written up at the architecture level. Client code and data stay private.</p>
+
+          <article class="case">
+            <span class="mono">Reliability · Controla-VA</span>
+            <h3>A 17-minute session billed as 16.5 hours</h3>
+            <dl>
+              <dt>Problem</dt>
+              <dd>A worker tracked 17 minutes and closed their laptop; by morning the session read 16.5 hours. Open sessions were billed as <span class="code">now − start</span>, so any agent that died without a clean stop kept billing.</dd>
+              <dt>Approach</dt>
+              <dd>Billed time now has to be backed by evidence. A server-side clamp caps each session at its last recorded activity plus a grace window, and a reaper closes sessions whose agent has gone quiet. I later closed a second path where late offline data re-billed dead gaps, and designed an event-sourced model in which billed time is the union of verified intervals.</dd>
+              <dt>Result</dt>
+              <dd>Every installed agent version was corrected at once, without a client update. Under the new model, phantom hours can't be billed at all.</dd>
+            </dl>
+          </article>
+
+          <article class="case">
+            <span class="mono">AI · Controla-VA</span>
+            <h3>Keeping AI matching costs flat as data grows</h3>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Matching jobs to candidates meant an LLM scoring every CV in a keyword category. Cost grew with every upload, and keywords missed obvious matches such as "ML engineer" against "machine learning".</dd>
+              <dt>Approach</dt>
+              <dd>Retrieve, then rank. Each CV is embedded once into pgvector with an HNSW index, each job retrieves its nearest candidates, and only that shortlist goes to the LLM. Keeping vectors in PostgreSQL meant one query next to the existing filters and no new infrastructure.</dd>
+              <dt>Result</dt>
+              <dd>LLM cost per scan depends on the shortlist size, not on how many CVs exist. Candidates also surface for related roles they never applied to.</dd>
+            </dl>
+          </article>
+
+          <article class="case">
+            <span class="mono">Desktop · Controla-VA</span>
+            <h3>One desktop agent, about 50 machines, three operating systems</h3>
+            <dl>
+              <dt>Problem</dt>
+              <dd>The agent runs on machines I can't touch. It has to survive sleep, crashes, power cuts and bad networks, update itself, and never lose or double-count paid time.</dd>
+              <dt>Approach</dt>
+              <dd>Electron with native modules. Every sample gets a client-generated ID, so the offline queue can retry safely. Updates install silently from a versioned channel, and the server enforces a minimum version. Browser URLs come from C# UI Automation over FFI. For macOS and Linux, a build-time platform layer keeps each bundle free of the other systems' code.</dd>
+              <dt>Result</dt>
+              <dd>The fleet updates itself, and most fixes ship on the server without a new build.</dd>
+            </dl>
+          </article>
+
+          <article class="case">
+            <span class="mono">AI agents · Growth Rise Solutions</span>
+            <h3>Multi-agent AI for hands-off business processes</h3>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Processes that spanned CRMs, messaging tools and data sources depended on people copying data across and pushing each step along.</dd>
+              <dt>Approach</dt>
+              <dd>CrewAI and LangChain agent crews with custom memory and tool orchestration, wrapped in FastAPI services and triggered by event-driven n8n workflows. Each service ships as a Docker image to Railway through GitHub Actions, with versioned releases and rollback.</dd>
+              <dt>Result</dt>
+              <dd>Multi-step tasks run end to end with no manual handoffs, and a bad release can be rolled back in minutes.</dd>
+            </dl>
+          </article>
+
+          <article class="case">
+            <span class="mono">Machine learning · Box</span>
+            <h3>Recommendations for a live grocery app</h3>
+            <dl>
+              <dt>Problem</dt>
+              <dd>The app needed better product discovery, but new products and new shoppers have little or no purchase history to learn from.</dd>
+              <dt>Approach</dt>
+              <dd>A hybrid LightFM model that combines collaborative signals (what similar shoppers buy) with product metadata, so a new item can be recommended from its features alone. It runs as a FastAPI microservice that the app calls in real time.</dd>
+              <dt>Result</dt>
+              <dd>Live in production on box.com.pk, where it drives product discovery.</dd>
+            </dl>
+          </article>
+
+          <article class="case">
+            <span class="mono">Data tooling · Bitnine Global</span>
+            <h3>An extensible Oracle-to-PostgreSQL migration tool</h3>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Moving schemas and data from Oracle to PostgreSQL by hand is slow and error-prone. The DDL syntax, data types and conventions all differ.</dd>
+              <dt>Approach</dt>
+              <dd>A Python pipeline in three stages: extract the source DDL, transform it for the target schema, then move the data. One core sits behind both the CLI and the desktop GUI, and source-specific logic is kept separate so DB2 and MySQL can plug in.</dd>
+              <dt>Result</dt>
+              <dd>Full migrations run from one tool, and supporting a new database means writing a module rather than changing the core.</dd>
+            </dl>
+          </article>
         </div>
-      </div>
+      </section>
 
-      <!-- Photo -->
-      <div class="justify-self-center lg:justify-self-end">
-        <div class="relative">
-          <div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-accent via-accent2 to-accent3 blur-2xl opacity-40"></div>
-          <div class="relative p-1.5 rounded-[2rem] bg-gradient-to-tr from-accent via-accent2 to-accent3">
-            <img src="assets/muzzammil.jpg" alt="Muzzammil Sarwar"
-                 class="w-56 h-64 sm:w-64 sm:h-80 object-cover rounded-[1.7rem]" />
+      <section class="sec" id="experience">
+        <h2>Experience</h2>
+        <div>
+          <div class="job">
+            <span class="mono">May 2026 – now</span>
+            <div>
+              <h3>Full-Stack Developer <span>· Growth Rise Solutions, remote</span></h3>
+              <ul>
+                <li>Sole engineer and architect of Controla-VA: five Next.js portals on a NestJS API, PostgreSQL and Prisma.</li>
+                <li>Built an Electron desktop agent used on about 50 workstations; macOS and Linux ports in progress.</li>
+                <li>Shipped AI features (RAG matching, vision classification, LLM document parsing) and a multi-currency finance platform.</li>
+                <li>Run staging and production on Docker, Caddy and Cloudflare, with CI/CD gated by automated tests.</li>
+              </ul>
+            </div>
           </div>
-          <div class="absolute -bottom-4 -left-4 glass rounded-xl px-3 py-2 font-mono text-xs text-accent">$ shipping to prod</div>
+          <div class="job">
+            <span class="mono">Dec 2024 – Apr 2026</span>
+            <div>
+              <h3>Python / AI Engineer <span>· Growth Rise Solutions, remote</span></h3>
+              <ul>
+                <li>Built multi-agent AI systems with CrewAI and LangChain, including custom memory and tool orchestration.</li>
+                <li>Connected agents to CRMs, messaging and data sources through event-driven n8n workflows.</li>
+                <li>Built high-concurrency FastAPI backends, plus Next.js and Streamlit front ends for AI products.</li>
+                <li>Built the LightFM recommendation service behind the Box grocery app, and owned Docker deployments, releases and rollback.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job">
+            <span class="mono">Apr 2023 – Dec 2024</span>
+            <div>
+              <h3>Software Engineer <span>· Bitnine Global, Islamabad</span></h3>
+              <ul>
+                <li>Designed a Python test-automation framework for regression, smoke and sanity testing across Bash, PowerShell and CMD.</li>
+                <li>Built an Oracle-to-PostgreSQL migration tool with a CLI and a desktop GUI.</li>
+                <li>Structured it so new source databases (DB2, MySQL) plug in without touching the core.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job">
+            <span class="mono">Apr 2021 – Aug 2022</span>
+            <div>
+              <h3>Full-Stack Developer (MEAN) <span>· Zepto Systems, Islamabad</span></h3>
+              <ul>
+                <li>Built responsive Angular and AngularJS interfaces for a full-stack web application.</li>
+                <li>Designed Express.js REST APIs on MySQL, with Strapi as a headless CMS.</li>
+                <li>Used Pug templates to keep views maintainable and UI changes quick.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="job">
+            <span class="mono">2019 – 2023</span>
+            <div>
+              <h3>BS Computer Science <span>· NUST (SEECS), Islamabad</span></h3>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- STATS -->
-    <section class="grid grid-cols-2 sm:grid-cols-4 gap-4 pb-16 fade">
-      <div class="glass rounded-2xl p-5 text-center">
-        <div class="font-display text-3xl font-extrabold gradient-text">5 yrs</div>
-        <div class="mt-1 text-xs text-slate-400">Shipping production software</div>
-      </div>
-      <div class="glass rounded-2xl p-5 text-center">
-        <div class="font-display text-3xl font-extrabold gradient-text">130k</div>
-        <div class="mt-1 text-xs text-slate-400">Lines of TypeScript I own as sole engineer</div>
-      </div>
-      <div class="glass rounded-2xl p-5 text-center">
-        <div class="font-display text-3xl font-extrabold gradient-text">~50</div>
-        <div class="mt-1 text-xs text-slate-400">Workstations running my desktop agent</div>
-      </div>
-      <div class="glass rounded-2xl p-5 text-center">
-        <div class="font-display text-3xl font-extrabold gradient-text">55k</div>
-        <div class="mt-1 text-xs text-slate-400">Lines of tests gating every deploy</div>
-      </div>
-    </section>
+      <section class="sec" id="skills">
+        <h2>Skills</h2>
+        <dl class="skills">
+          <dt>Languages</dt><dd>TypeScript, JavaScript, Python, SQL, Bash, C#</dd>
+          <dt>Backend</dt><dd>Node.js, NestJS, Express, FastAPI, REST APIs, BullMQ, Redis, Auth.js, webhooks</dd>
+          <dt>Frontend</dt><dd>Next.js, React, Angular, Streamlit, Tailwind CSS, Radix UI</dd>
+          <dt>Data</dt><dd>PostgreSQL, MySQL, Prisma, pgvector, schema design, query optimisation, database migration</dd>
+          <dt>AI</dt><dd>OpenAI, Gemini Vision, RAG and embeddings, CrewAI, LangChain, LightFM</dd>
+          <dt>Automation</dt><dd>n8n, event-driven workflows, third-party API integration</dd>
+          <dt>Desktop</dt><dd>Electron, native modules and FFI, Windows UI Automation (C#), macOS and Linux builds</dd>
+          <dt>DevOps</dt><dd>Docker, GitHub Actions, Caddy, Cloudflare, Railway, Linux</dd>
+          <dt>Testing</dt><dd>Jest, React Testing Library, Python test automation</dd>
+          <dt>How I work</dt><dd>I own the architecture: service boundaries, data model and failure modes. Claude Code and Cursor handle much of the implementation. Tests, type checks and my own review decide what ships.</dd>
+        </dl>
+      </section>
 
-    <!-- TECH MARQUEE -->
-    <div class="marquee-wrap overflow-hidden py-6 mb-8 border-y border-edge fade">
-      <div class="marquee text-slate-500 font-display font-semibold text-lg whitespace-nowrap">
-        <span>TypeScript</span><span>NestJS</span><span>Next.js</span><span>React</span><span>PostgreSQL</span><span>pgvector</span><span>Prisma</span><span>Redis</span><span>BullMQ</span><span>Electron</span><span>OpenAI</span><span>Gemini</span><span>Python</span><span>FastAPI</span><span>Docker</span><span>Cloudflare</span><span>GitHub Actions</span><span>Claude Code</span>
-        <span>TypeScript</span><span>NestJS</span><span>Next.js</span><span>React</span><span>PostgreSQL</span><span>pgvector</span><span>Prisma</span><span>Redis</span><span>BullMQ</span><span>Electron</span><span>OpenAI</span><span>Gemini</span><span>Python</span><span>FastAPI</span><span>Docker</span><span>Cloudflare</span><span>GitHub Actions</span><span>Claude Code</span>
-      </div>
-    </div>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="py-16 fade">
-      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mb-2">Featured work</h2>
-      <p class="text-slate-400 mb-10">Products I've designed, built, and shipped to real users.</p>
-
-      <div class="grid md:grid-cols-2 gap-6">
-
-        <!-- Controla-VA -->
-        <article class="card md:col-span-2 glass rounded-2xl p-7">
-          <div class="flex items-start justify-between gap-4 flex-wrap">
-            <div>
-              <div class="flex items-center gap-2 mb-2">
-                <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-green-400">
-                  <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-green-400"></span></span>
-                  LIVE
-                </span>
-                <span class="font-mono text-xs text-accent">Flagship SaaS</span>
-              </div>
-              <h3 class="font-display text-2xl font-bold text-white">Controla-VA</h3>
-              <p class="text-slate-400 text-sm">Workforce &amp; Time-Tracking Platform</p>
-            </div>
-            <a href="https://controla-va.com" target="_blank" rel="noopener" class="shrink-0 px-4 py-2 rounded-xl bg-gradient-to-r from-accent to-accent2 text-ink text-sm font-semibold hover:scale-105 transition">Visit live site →</a>
+      <section class="sec contact" id="contact">
+        <h2>Contact</h2>
+        <div>
+          <p>Email is the quickest way to reach me: <a href="mailto:muzzammil@umaish.com">muzzammil@umaish.com</a></p>
+          <div class="links">
+            <a href="https://github.com/Muzzammil242" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/muzzammil-sarwar" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="tel:+923359348075">+92 335 9348075</a>
+            <a href="assets/Muzzammil_Sarwar_Resume.pdf" target="_blank" rel="noopener">CV (PDF)</a>
           </div>
-          <p class="mt-5 text-slate-400 leading-relaxed">
-            A workforce time-tracking and productivity platform for distributed teams, where I'm the sole engineer: I own the design, code, infrastructure and production support. Live in production with real teams and real billing.
-          </p>
-          <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
-            <div class="rounded-xl border border-edge bg-white/[0.02] p-4">
-              <div class="font-mono text-xs text-accent mb-1.5">Platform</div>
-              <p class="text-slate-400 leading-relaxed">Five role-based <span class="text-slate-200">Next.js</span> portals (admin, client, time tracker, recruiting, finance) on a <span class="text-slate-200">NestJS</span> API with 30+ modules, PostgreSQL and Prisma. Office-scoped RBAC, anomaly alerts with a review workflow, a device block list and a full audit trail.</p>
-            </div>
-            <div class="rounded-xl border border-edge bg-white/[0.02] p-4">
-              <div class="font-mono text-xs text-accent mb-1.5">Desktop agent · Windows, macOS, Linux</div>
-              <p class="text-slate-400 leading-relaxed"><span class="text-slate-200">Electron</span> agent on ~50 workstations across Asia and Latin America: multi-monitor screenshots, idle detection, an offline queue with idempotent sync, in-app tasks, native C# URL reading and silent auto-updates. macOS and Linux ports sit behind a build-time platform layer.</p>
-            </div>
-            <div class="rounded-xl border border-edge bg-white/[0.02] p-4">
-              <div class="font-mono text-xs text-accent mb-1.5">AI in production</div>
-              <p class="text-slate-400 leading-relaxed">RAG candidate matching on <span class="text-slate-200">pgvector</span>, Gemini vision classification of screenshots, LLM parsing of invoices and CVs with a fallback for scanned PDFs, and a grounded finance assistant.</p>
-            </div>
-            <div class="rounded-xl border border-edge bg-white/[0.02] p-4">
-              <div class="font-mono text-xs text-accent mb-1.5">Finance platform</div>
-              <p class="text-slate-400 leading-relaxed">~37k lines that reconcile multi-currency statements from Israeli banks (Hebrew exports), PayPal, Payoneer, Airwallex and eBay. Invoice matching, VAT, exact-precision FX and a three-tier P&amp;L dashboard.</p>
-            </div>
-            <div class="rounded-xl border border-edge bg-white/[0.02] p-4">
-              <div class="font-mono text-xs text-accent mb-1.5">Reliability</div>
-              <p class="text-slate-400 leading-relaxed">Evidence-based billing with a session reaper, event-sourced billing in shadow mode, per-time-zone day boundaries, a boot-ID-anchored trusted clock, and a measured scalability audit.</p>
-            </div>
-            <div class="rounded-xl border border-edge bg-white/[0.02] p-4">
-              <div class="font-mono text-xs text-accent mb-1.5">Integrations &amp; infra</div>
-              <p class="text-slate-400 leading-relaxed">Zoom SDK meetings with auto-recording and AI summaries, and a WhatsApp recruiting funnel. Staging and production on Docker, Caddy and Cloudflare, with CI/CD over Tailscale and nightly backups.</p>
-            </div>
-          </div>
-          <div class="mt-5 rounded-xl border border-dashed border-accent2/40 bg-accent2/[0.04] p-4">
-            <div class="font-mono text-xs text-accent2 mb-2">Next on the roadmap</div>
-            <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-300">
-              <span>→ Signed macOS release and Linux (X11, then Wayland)</span>
-              <span>→ In-app messaging with live Hebrew–Urdu translation of text and voice</span>
-              <span>→ AI voice interviewer for first-round candidate screening</span>
-            </div>
-          </div>
-          <div class="mt-5 flex flex-wrap gap-2 font-mono text-xs">
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Next.js 14</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">NestJS</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">PostgreSQL</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">pgvector</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Prisma</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Redis / BullMQ</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Electron</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">C# / FFI</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">OpenAI</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Gemini Vision</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Zoom SDK</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Docker</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Cloudflare</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">GitHub Actions</span>
-          </div>
-        </article>
-
-        <!-- Box -->
-        <article class="card glass rounded-2xl p-7">
-          <div class="flex items-start justify-between gap-3">
-            <div>
-              <div class="flex items-center gap-2 mb-2">
-                <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-green-400">
-                  <span class="relative flex h-2 w-2"><span class="animate-ping absolute h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative rounded-full h-2 w-2 bg-green-400"></span></span>
-                  LIVE
-                </span>
-                <span class="font-mono text-xs text-accent">Recommender</span>
-              </div>
-              <h3 class="font-display text-2xl font-bold text-white">Box</h3>
-              <p class="text-slate-400 text-sm">Grocery recommendation engine</p>
-            </div>
-            <a href="https://www.box.com.pk/" target="_blank" rel="noopener" class="shrink-0 px-3 py-2 rounded-xl glass text-accent text-sm font-semibold hover:border-accent transition">Live →</a>
-          </div>
-          <p class="mt-5 text-slate-400 leading-relaxed text-sm">
-            A hybrid collaborative + content-based recommendation microservice built with <span class="text-slate-200">LightFM</span> and exposed via FastAPI, powering product discovery and engagement for a live online grocery platform.
-          </p>
-          <div class="mt-5 flex flex-wrap gap-2 font-mono text-xs">
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Python</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">LightFM</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">FastAPI</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Recommenders</span>
-          </div>
-        </article>
-
-        <!-- Migration tool -->
-        <article class="card glass rounded-2xl p-7">
-          <span class="font-mono text-xs text-accent">Data engineering</span>
-          <h3 class="mt-2 font-display text-2xl font-bold text-white">DB Migration Tool</h3>
-          <p class="text-slate-400 text-sm">Oracle → PostgreSQL</p>
-          <p class="mt-5 text-slate-400 leading-relaxed text-sm">
-            End-to-end migration tool with CLI and desktop GUI, written entirely in Python — DDL extraction, schema transformation, and full data migration, architected for extensibility to other databases (DB2, MySQL) without rewriting core logic.
-          </p>
-          <div class="mt-5 flex flex-wrap gap-2 font-mono text-xs">
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Python</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Oracle</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">PostgreSQL</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Schema Design</span>
-          </div>
-        </article>
-
-        <!-- Cold Storage -->
-        <article class="card glass rounded-2xl p-7">
-          <span class="font-mono text-xs text-accent">AI / ML</span>
-          <h3 class="mt-2 font-display text-2xl font-bold text-white">Smart Cold Storage Dashboard</h3>
-          <p class="text-slate-400 text-sm">Predictive maintenance &amp; monitoring</p>
-          <p class="mt-5 text-slate-400 leading-relaxed text-sm">
-            Full-stack dashboard for cold-storage automation with real-time temperature monitoring and predictive maintenance. Integrated ML to analyze historical data, forecast temperature trends, and recommend optimal storage conditions to improve energy efficiency.
-          </p>
-          <div class="mt-5 flex flex-wrap gap-2 font-mono text-xs">
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Python</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Machine Learning</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Full-Stack</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Forecasting</span>
-          </div>
-        </article>
-
-        <!-- Kids Learning -->
-        <article class="card glass rounded-2xl p-7">
-          <span class="font-mono text-xs text-accent">AI / EdTech</span>
-          <h3 class="mt-2 font-display text-2xl font-bold text-white">Kids Learning Platform</h3>
-          <p class="text-slate-400 text-sm">Eye tracking &amp; personalised content</p>
-          <p class="mt-5 text-slate-400 leading-relaxed text-sm">
-            A web platform that pairs an <span class="text-slate-200">eye-tracking model</span> (real-time engagement analysis through custom APIs) with a fine-tuned GPT-3 model that adapts educational content to each child's learning patterns. I owned the front end, the back end and the model integration.
-          </p>
-          <div class="mt-5 flex flex-wrap gap-2 font-mono text-xs">
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Computer Vision</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Fine-tuned LLM</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">REST APIs</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Full-Stack</span>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- CASE STUDIES -->
-    <section id="case-studies" class="py-16 fade">
-      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mb-2">Case studies</h2>
-      <p class="text-slate-400 mb-10 max-w-2xl">How I approach hard problems in production. These are architecture-level write-ups: the code and data belong to the client, so none of it appears here.</p>
-
-      <div class="grid lg:grid-cols-2 gap-6">
-
-        <!-- CS1: phantom hours -->
-        <article class="card glass rounded-2xl p-7 flex flex-col">
-          <span class="font-mono text-xs text-accent">Reliability · Billing</span>
-          <h3 class="mt-2 font-display text-xl sm:text-2xl font-bold text-white">A 17-minute session billed as 16.5 hours</h3>
-          <dl class="mt-5 space-y-4 text-sm leading-relaxed">
-            <div>
-              <dt class="font-semibold text-slate-200">The problem</dt>
-              <dd class="mt-1 text-slate-400">A worker tracked 17 minutes and closed their laptop; by the next morning the session read 16.5 hours. Every read path billed an open session as <span class="font-mono text-slate-300">now − startedAt</span>, so when the agent died without a clean stop (shutdown, crash, dead battery, lost network), the session kept billing the whole time it was off. The server held bad data; this wasn't a display bug.</dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-slate-200">What I did</dt>
-              <dd class="mt-1 text-slate-400">I changed the rule: billed time has to be backed by evidence, not by the absence of a stop event. Built a server-side clamp that caps a session at its last activity evidence plus a grace window, and a 60-second reaper that closes sessions whose agent has gone silent. Two months later a second cause appeared: late-arriving offline evidence was stretching closed sessions across dead gaps. I gave that path a floor as well as a ceiling. Then I designed an event-sourced model where billed time is the union of verified intervals, and ran it in shadow mode against the live numbers.</dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-slate-200">Outcome</dt>
-              <dd class="mt-1 text-slate-400">Fixed server-side, so every installed agent version was corrected at once with no client update. A later re-check on production found every long session backed by continuous activity evidence. In the new model, double and phantom billing are impossible by construction.</dd>
-            </div>
-          </dl>
-          <div class="mt-auto pt-6 flex flex-wrap gap-2 font-mono text-xs">
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Root-cause analysis</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">NestJS</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">PostgreSQL</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Event sourcing</span>
-          </div>
-        </article>
-
-        <!-- CS2: RAG -->
-        <article class="card glass rounded-2xl p-7 flex flex-col">
-          <span class="font-mono text-xs text-accent">AI · Cost at scale</span>
-          <h3 class="mt-2 font-display text-xl sm:text-2xl font-bold text-white">Keeping LLM matching costs flat as the database grows</h3>
-          <dl class="mt-5 space-y-4 text-sm leading-relaxed">
-            <div>
-              <dt class="font-semibold text-slate-200">The problem</dt>
-              <dd class="mt-1 text-slate-400">The recruiting tool matched jobs to candidates by having an LLM score every CV in a keyword-matched category. Cost grew with every CV uploaded, and keyword filters missed obvious matches ("ML engineer" vs. "machine learning"), as well as people whose CV was uploaded for a different but related role.</dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-slate-200">What I did</dt>
-              <dd class="mt-1 text-slate-400">Built retrieve-then-rank. Each CV is embedded once, on upload, into PostgreSQL with <span class="text-slate-200">pgvector</span> and an HNSW index. A job retrieves its nearest candidates by cosine distance, and only that shortlist goes to the LLM for structured scoring, with the results persisted. The same index runs the other way, surfacing open jobs for a new candidate. I chose pgvector over a dedicated vector database: at this scale it's one SQL query next to the existing filters, with no new infrastructure. The old category scan is kept as a fallback, so a scan never returns nothing.</dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-slate-200">Outcome</dt>
-              <dd class="mt-1 text-slate-400">LLM cost per scan is fixed by the shortlist size, not the database size. Matching is now semantic, so candidates surface for related roles they never applied to. Embedding a CV costs a fraction of a cent, once.</dd>
-            </div>
-          </dl>
-          <div class="mt-auto pt-6 flex flex-wrap gap-2 font-mono text-xs">
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">RAG</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">pgvector / HNSW</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">OpenAI embeddings</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Structured outputs</span>
-          </div>
-        </article>
-
-        <!-- CS3: desktop agent -->
-        <article class="card glass rounded-2xl p-7 flex flex-col">
-          <span class="font-mono text-xs text-accent">Desktop · Distributed systems</span>
-          <h3 class="mt-2 font-display text-xl sm:text-2xl font-bold text-white">Shipping a desktop agent to a live fleet</h3>
-          <dl class="mt-5 space-y-4 text-sm leading-relaxed">
-            <div>
-              <dt class="font-semibold text-slate-200">The problem</dt>
-              <dd class="mt-1 text-slate-400">A tracking agent on ~50 machines I can't touch, spread across Asia and Latin America, has to survive sleep, crashes, power cuts and flaky networks. It has to update itself without IT support, and it must never lose or double-count a minute that someone gets paid for. Then it has to run on macOS and Linux too.</dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-slate-200">What I did</dt>
-              <dd class="mt-1 text-slate-400"><span class="text-slate-200">Electron</span> with native modules for input hooks, the OS keychain and image processing. It's offline-first: every sample carries a client-generated ID, so retries are idempotent on the server. Silent auto-updates come from a versioned release channel on Cloudflare R2, and the server enforces a minimum agent version, so stale builds are told to update instead of writing bad data. The active browser URL is read through C# UI Automation over FFI, capturing the site for ~95% of browsing time. As a rule, a fix goes on the server whenever it can, so it reaches every installed version at once. For macOS and Linux, a build-time platform layer strips every other OS's code from each bundle. macOS builds as a DMG in CI. Linux targets X11 first, then Wayland through a GNOME Shell extension.</dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-slate-200">Outcome</dt>
-              <dd class="mt-1 text-slate-400">The fleet upgrades itself through the release channel, a server-enforced minimum version retires old builds, and most fixes ship with no new build at all. When "tampering" alerts turned out to be power cuts (confirmed from Windows crash events), I anchored the trusted clock to the OS boot ID on all three platforms.</dd>
-            </div>
-          </dl>
-          <div class="mt-auto pt-6 flex flex-wrap gap-2 font-mono text-xs">
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Electron</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Offline-first</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Idempotency</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Auto-update</span>
-          </div>
-        </article>
-
-        <!-- CS4: audit IP -->
-        <article class="card glass rounded-2xl p-7 flex flex-col">
-          <span class="font-mono text-xs text-accent">Security · Infrastructure</span>
-          <h3 class="mt-2 font-display text-xl sm:text-2xl font-bold text-white">Trusting a client IP across four hops</h3>
-          <dl class="mt-5 space-y-4 text-sm leading-relaxed">
-            <div>
-              <dt class="font-semibold text-slate-200">The problem</dt>
-              <dd class="mt-1 text-slate-400">The audit log recorded a Docker container's IP for every action. A request travels browser → Cloudflare → Caddy → Next.js → API, so the API's peer is the web container. The obvious fix, trusting <span class="font-mono text-slate-300">X-Forwarded-For</span>, would let anyone write a fake IP into a security log. And behind Cloudflare, even the proxy's own header held the edge's IP, which geolocated to another continent.</dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-slate-200">What I did</dt>
-              <dd class="mt-1 text-slate-400">The Next.js tier reads the visitor IP from Cloudflare's own header first, falling back through the proxy headers. It forwards that IP inward with a shared-secret internal header that is different per environment. The API accepts the forwarded IP only when the secret matches; otherwise it uses the socket address. The header is read in exactly one place, behind that gate. The audit log is append-only, has no foreign keys (so rows outlive deletions) and never stores secrets or payloads.</dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-slate-200">Outcome</dt>
-              <dd class="mt-1 text-slate-400">A who-did-what trail with the real client IP that an external caller can't spoof. If the secret is missing, it fails safe: it falls back to the old behaviour instead of trusting user input.</dd>
-            </div>
-          </dl>
-          <div class="mt-auto pt-6 flex flex-wrap gap-2 font-mono text-xs">
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Threat modelling</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Cloudflare</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Caddy</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Audit logging</span>
-          </div>
-        </article>
-
-        <!-- CS5: cross-midnight -->
-        <article class="card glass rounded-2xl p-7 flex flex-col">
-          <span class="font-mono text-xs text-accent">Correctness · Time zones</span>
-          <h3 class="mt-2 font-display text-xl sm:text-2xl font-bold text-white">Night shifts that vanished at midnight</h3>
-          <dl class="mt-5 space-y-4 text-sm leading-relaxed">
-            <div>
-              <dt class="font-semibold text-slate-200">The problem</dt>
-              <dd class="mt-1 text-slate-400">On the first of the month, people who'd worked overnight had zero hours for the new day. Every report filed a session under the day it <em>started</em>, so a shift running 11 pm to 4 am counted entirely in the old month. The obvious fix, splitting at midnight, raises the next question: whose midnight? The team spans Guatemala to Karachi.</dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-slate-200">What I did</dt>
-              <dd class="mt-1 text-slate-400">I set the rule that a worker's hours belong to the day they were worked <span class="text-slate-200">on their own clock</span>: the agent's time zone first, then the office's. Reads became overlap queries that clip each session to the window, with a short look-back so sessions that started before the window are still found. Day, week and month boundaries are computed per zone in a DST-safe way, and every window end comes from the same start-of-period function, never from calendar math. One more trap: timestamps were stored without a time zone, so every conversion is explicit.</dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-slate-200">Outcome</dt>
-              <dd class="mt-1 text-slate-400">A Karachi night shift now splits at Karachi midnight. A Guatemala shift that looks like it crosses midnight in Karachi stays whole on its own day. Billing-sensitive reports were left on the old convention on purpose, behind a single seam, until finance signs off.</dd>
-            </div>
-          </dl>
-          <div class="mt-auto pt-6 flex flex-wrap gap-2 font-mono text-xs">
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Time zones</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">SQL</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">DST</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Domain modelling</span>
-          </div>
-        </article>
-
-        <!-- CS6: finance reconciliation -->
-        <article class="card glass rounded-2xl p-7 flex flex-col">
-          <span class="font-mono text-xs text-accent">Data engineering · Finance</span>
-          <h3 class="mt-2 font-display text-xl sm:text-2xl font-bold text-white">Reconciling money across six sources and two languages</h3>
-          <dl class="mt-5 space-y-4 text-sm leading-relaxed">
-            <div>
-              <dt class="font-semibold text-slate-200">The problem</dt>
-              <dd class="mt-1 text-slate-400">The company's month-end was a spreadsheet stitched from bank exports (in Hebrew), PayPal, Payoneer, Airwallex and eBay statements, in several currencies. Every source has its own format, quirks and ways of hiding the same transaction twice.</dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-slate-200">What I did</dt>
-              <dd class="mt-1 text-slate-400">Built an import-and-reconcile platform: per-source parsers, rule-based classification that learns from manual decisions, invoice matching, VAT and a three-tier P&amp;L. Then I hunted the edge cases:
-                <span class="block mt-2">· One bank's credit column header <em>contains</em> another bank's header as a substring, so a header test silently read every outgoing payment as zero. Layout is now detected from the header, not the file extension, and an unreadable amount is flagged, never booked as 0.</span>
-                <span class="block mt-1">· A rounding fix that "worked" came back on re-import, because the import path ran its own raw SQL. The lesson: a data migration is never a fix on its own.</span>
-                <span class="block mt-1">· The same payment listed as Pending and Completed was being summed twice; partial card funding was being read as the price.</span>
-              </dd>
-            </div>
-            <div>
-              <dt class="font-semibold text-slate-200">Outcome</dt>
-              <dd class="mt-1 text-slate-400">Months reconcile to the cent at exact-precision FX. Each fix is pinned by a test against the SQL the database actually receives, and a grounded AI assistant answers finance questions from the ledger without inventing numbers.</dd>
-            </div>
-          </dl>
-          <div class="mt-auto pt-6 flex flex-wrap gap-2 font-mono text-xs">
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">ETL</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">Multi-currency</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">PostgreSQL</span>
-            <span class="chip px-2.5 py-1 rounded-lg border border-edge text-slate-400">LLM grounding</span>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="py-16 fade">
-      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mb-10">Experience</h2>
-      <div class="space-y-7 relative pl-7 before:absolute before:left-0 before:top-2 before:bottom-2 before:w-px before:bg-gradient-to-b before:from-accent before:via-accent2 before:to-transparent">
-        <div class="relative">
-          <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-accent ring-4 ring-accent/20"></span>
-          <div class="flex flex-wrap justify-between gap-2">
-            <h3 class="text-white font-semibold font-display">Full-Stack Developer <span class="text-accent">· Growth Rise Solutions</span></h3>
-            <span class="font-mono text-xs text-slate-500">May 2026 – Present</span>
-          </div>
-          <p class="mt-2 text-slate-400 text-sm">Sole engineer on Controla-VA, a workforce time-tracking platform in production.</p>
-          <ul class="mt-3 space-y-1.5 text-slate-400 text-sm list-disc pl-5 marker:text-accent">
-            <li>Built five role-based Next.js portals on a NestJS API (30+ modules, PostgreSQL, Prisma): ~130k lines of TypeScript. Led a three-tier refactor that moved all data access and business logic behind the API.</li>
-            <li>Shipped an Electron agent to ~50 workstations: offline queue with idempotent sync, native C# URL reading, silent auto-updates from a versioned channel. Porting it to macOS and Linux.</li>
-            <li>Fixed an over-billing class of bug server-side, correcting every agent version without a client update, then designed an event-sourced billing model. Fixed per-time-zone day boundaries for teams spanning Guatemala to Karachi.</li>
-            <li>Put AI into production: RAG matching on pgvector, Gemini vision classification, LLM invoice and CV parsing, and a grounded finance assistant.</li>
-            <li>Built a ~37k-line finance platform that reconciles multi-currency bank and payment-provider statements into a three-tier P&amp;L.</li>
-            <li>Run staging and production on Docker, Caddy and Cloudflare, with GitHub Actions CI/CD over Tailscale and a 55k-line test suite gating every deploy.</li>
-          </ul>
         </div>
-        <div class="relative">
-          <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-white/20"></span>
-          <div class="flex flex-wrap justify-between gap-2">
-            <h3 class="text-white font-semibold font-display">Python / AI Engineer <span class="text-accent">· Growth Rise Solutions</span></h3>
-            <span class="font-mono text-xs text-slate-500">Dec 2024 – Apr 2026</span>
-          </div>
-          <p class="mt-2 text-slate-400 text-sm">Built multi-agent AI systems (CrewAI, LangChain) with custom memory and tool orchestration, event-driven n8n automations and high-concurrency FastAPI services, containerised and deployed through GitHub Actions. Built the LightFM recommendation service behind the Box grocery app.</p>
-        </div>
-        <div class="relative">
-          <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-white/20"></span>
-          <div class="flex flex-wrap justify-between gap-2">
-            <h3 class="text-white font-semibold font-display">Software Engineer <span class="text-accent">· Bitnine Global</span></h3>
-            <span class="font-mono text-xs text-slate-500">Apr 2023 – Dec 2024</span>
-          </div>
-          <p class="mt-2 text-slate-400 text-sm">Built a Python test-automation framework and an Oracle→PostgreSQL migration tool with CLI and GUI interfaces.</p>
-        </div>
-        <div class="relative">
-          <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-white/20"></span>
-          <div class="flex flex-wrap justify-between gap-2">
-            <h3 class="text-white font-semibold font-display">Full-Stack Developer (MEAN) <span class="text-accent">· Zepto Systems</span></h3>
-            <span class="font-mono text-xs text-slate-500">Apr 2021 – Aug 2022</span>
-          </div>
-          <p class="mt-2 text-slate-400 text-sm">Built responsive Angular/AngularJS UIs and Express.js REST APIs with MySQL, integrating Strapi as a headless CMS.</p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- SKILLS -->
-    <section id="skills" class="py-16 fade">
-      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mb-10">Skills &amp; tools</h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        <div class="card glass rounded-2xl p-6">
-          <h3 class="text-white font-semibold font-display mb-3">⌨️ Languages</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">TypeScript, JavaScript, Python, SQL, Bash</p>
-        </div>
-        <div class="card glass rounded-2xl p-6">
-          <h3 class="text-white font-semibold font-display mb-3">⚙️ Backend</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Node.js, NestJS, Express, FastAPI, REST APIs, BullMQ, Redis, Auth.js / JWT, Webhooks</p>
-        </div>
-        <div class="card glass rounded-2xl p-6">
-          <h3 class="text-white font-semibold font-display mb-3">🎨 Frontend</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Next.js (App Router, Server Components), React, Tailwind CSS, Radix UI, React Hook Form, Zod</p>
-        </div>
-        <div class="card glass rounded-2xl p-6">
-          <h3 class="text-white font-semibold font-display mb-3">🗄️ Data</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">PostgreSQL, Prisma, pgvector (HNSW), MySQL, query optimisation &amp; indexing, versioned migrations, ETL &amp; reconciliation</p>
-        </div>
-        <div class="card glass rounded-2xl p-6">
-          <h3 class="text-white font-semibold font-display mb-3">🤖 AI / LLM</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">OpenAI API, Gemini Vision, RAG &amp; embeddings, structured outputs, LangChain, CrewAI, LightFM</p>
-        </div>
-        <div class="card glass rounded-2xl p-6">
-          <h3 class="text-white font-semibold font-display mb-3">🖥️ Desktop</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Electron, auto-update pipelines, native modules &amp; FFI, Windows UI Automation (C#), macOS and Linux (X11 / Wayland) builds</p>
-        </div>
-        <div class="card glass rounded-2xl p-6">
-          <h3 class="text-white font-semibold font-display mb-3">☁️ DevOps &amp; Cloud</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Docker, GitHub Actions, Caddy, Cloudflare (DNS, R2, WAF), Tailscale, Linux, Jest, React Testing Library</p>
-        </div>
-        <div class="card glass rounded-2xl p-6 ring-1 ring-accent2/30">
-          <h3 class="text-white font-semibold font-display mb-3">✨ AI-assisted engineering</h3>
-          <p class="text-slate-400 text-sm leading-relaxed"><span class="text-slate-200">Claude Code</span> and Cursor as daily tools: agentic workflows with custom skills, project memory and parallel sub-agents for research. Every change still goes through tests, type checks and my own review.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="py-20 fade">
-      <div class="card glass rounded-3xl p-10 sm:p-14 text-center">
-        <p class="font-mono text-accent text-sm mb-3">// what's next</p>
-        <h2 class="font-display text-4xl sm:text-5xl font-extrabold text-white">Let's build something<br><span class="gradient-text">great together.</span></h2>
-        <p class="mt-5 max-w-md mx-auto text-slate-400">Open to remote senior full-stack and AI engineering roles. My inbox is always open, so let's talk.</p>
-        <div class="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="mailto:muzzammil@umaish.com" class="inline-block px-8 py-4 rounded-xl bg-gradient-to-r from-accent to-accent2 text-ink font-semibold btn-glow hover:scale-[1.03] transition">Say hello 👋</a>
-          <a href="assets/Muzzammil_Sarwar_Resume.pdf" target="_blank" rel="noopener" class="inline-block px-8 py-4 rounded-xl glass text-white font-semibold hover:border-accent hover:text-accent transition">Download CV</a>
-        </div>
-        <div class="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-slate-500">
-          <a href="https://github.com/Muzzammil242" target="_blank" rel="noopener" class="hover:text-accent transition">GitHub</a>
-          <a href="https://linkedin.com/in/muzzammil-sarwar" target="_blank" rel="noopener" class="hover:text-accent transition">LinkedIn</a>
-          <a href="tel:+923359348075" class="hover:text-accent transition">+92 335 9348075</a>
-          <span>Islamabad, PK</span>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="py-8 text-center text-xs text-slate-600 font-mono">
-    Designed &amp; built by Muzzammil Sarwar
-  </footer>
-
-  <script>
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade').forEach((el) => io.observe(el));
-  </script>
+    <footer>Muzzammil Sarwar · Islamabad · 2026</footer>
+  </div>
 </body>
 </html>
