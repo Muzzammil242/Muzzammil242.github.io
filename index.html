@@ -100,6 +100,9 @@
     .job ul { margin-top: 8px; padding-left: 18px; color: var(--muted); font-size: 15px; }
     .job li { margin-bottom: 4px; }
     .job .mono { padding-top: 2px; }
+    .job h4 { margin: 14px 0 0; font: 600 15px/1.4 var(--sans); color: var(--ink); }
+    .job h4:first-of-type { margin-top: 6px; }
+    .job h4 span { font: 400 12.5px/1 var(--mono); color: var(--faint); margin-left: 6px; }
 
     /* Skills */
     .skills { margin: 0; display: grid; grid-template-columns: 150px 1fr; gap: 12px 20px; }
@@ -145,7 +148,7 @@
           <h1>Muzzammil Sarwar</h1>
           <p class="role">Senior full-stack AI engineer</p>
           <p class="lede">I design software systems end to end and build them quickly with AI-assisted development, keeping tests and code review as the quality gate. Over five years I've worked on product platforms, AI systems and data tooling in TypeScript and Python.</p>
-          <p class="lede">Right now I'm the sole engineer on Controla-VA, a workforce platform with five web portals, a NestJS API and a desktop agent running on about 50 machines.</p>
+          <p class="lede">Right now I'm the sole engineer on Controla-VA, a workforce platform with five web portals, a NestJS API and a desktop agent running on about 50 machines. In my own time I maintain <a href="https://github.com/Muzzammil242/pgrecon" target="_blank" rel="noopener">pgrecon</a>, an open-source Oracle-to-PostgreSQL migration tool.</p>
           <p class="where">Islamabad, Pakistan. Open to remote roles.</p>
           <div class="links">
             <a href="mailto:muzzammil@umaish.com">Email</a>
@@ -168,12 +171,21 @@
             <p>Time tracking, productivity monitoring, recruiting and finance for a managed staffing company, in one platform. I'm the only engineer, covering architecture, code, infrastructure and production support.</p>
             <ul class="facets">
               <li><b>Platform</b>Five role-based Next.js portals on a NestJS API with PostgreSQL and Prisma. Office-scoped access control, an audit trail, and Zoom meetings with AI summaries.</li>
-              <li><b>Desktop agent</b>Electron, on about 50 workstations in Asia and Latin America. Offline-first sync, screenshots, idle detection and silent auto-updates. macOS and Linux ports in progress.</li>
+              <li><b>Desktop agent</b>Electron, on about 50 workstations in Asia and Latin America. Offline-first sync, screenshots, idle detection and silent auto-updates. Windows and Linux builds ship today; macOS is waiting on Apple signing.</li>
               <li><b>AI</b>RAG candidate matching on pgvector, Gemini vision classification of screenshots, and LLM parsing of invoices and CVs.</li>
               <li><b>Finance</b>Reconciles multi-currency bank and payment-provider statements into a three-tier P&amp;L, with a grounded AI assistant.</li>
             </ul>
             <p class="next"><b>Next:</b> in-app messaging with Hebrew–Urdu translation of text and voice, and an AI voice interviewer for first-round candidate screening.</p>
             <p class="stack">Next.js · NestJS · PostgreSQL · pgvector · Prisma · Redis · Electron · C# · OpenAI · Gemini · Docker · Cloudflare</p>
+          </article>
+
+          <article class="item">
+            <div class="item-head">
+              <h3>pgrecon</h3>
+              <span class="mono">Open source · <a href="https://github.com/Muzzammil242/pgrecon" target="_blank" rel="noopener">GitHub</a> · <a href="https://pypi.org/project/pgrecon/" target="_blank" rel="noopener">PyPI</a></span>
+            </div>
+            <p>An Oracle-to-PostgreSQL migration assessment and schema conversion tool. It inventories an Oracle database from an offline dump, runs a deterministic rule engine that flags the constructs that drive migration cost, and emits PostgreSQL DDL for everything it can prove, with a named refusal for everything it can't. Published on PyPI with 16 releases so far.</p>
+            <p class="stack">Python · SQLite · PL/SQL · PostgreSQL · GitHub Actions</p>
           </article>
 
           <article class="item">
@@ -197,7 +209,7 @@
           <article class="item">
             <div class="item-head">
               <h3>Smart Cold Storage Dashboard</h3>
-              <span class="mono">Project</span>
+              <span class="mono">Final-year project · NUST</span>
             </div>
             <p>Real-time temperature monitoring for cold-storage automation. ML models forecast temperature trends and recommend storage conditions, supporting predictive maintenance and lower energy use.</p>
             <p class="stack">Python · Machine learning · Forecasting</p>
@@ -206,7 +218,7 @@
           <article class="item">
             <div class="item-head">
               <h3>Kids Learning Platform</h3>
-              <span class="mono">Project</span>
+              <span class="mono">Freelance</span>
             </div>
             <p>An eye-tracking model measures engagement in real time, and a fine-tuned GPT-3 model adapts the learning content to each child. I built the front end, the back end and the model APIs.</p>
             <p class="stack">Computer vision · Fine-tuned GPT-3 · REST APIs</p>
@@ -254,7 +266,7 @@
               <dt>Approach</dt>
               <dd>Electron with native modules. Every sample gets a client-generated ID, so the offline queue can retry safely. Updates install silently from a versioned channel, and the server enforces a minimum version. Browser URLs come from C# UI Automation over FFI. For macOS and Linux, a build-time platform layer keeps each bundle free of the other systems' code.</dd>
               <dt>Result</dt>
-              <dd>The fleet updates itself, and most fixes ship on the server without a new build.</dd>
+              <dd>The fleet updates itself, and most fixes ship on the server without a new build. Windows and Linux builds ship today; macOS is waiting only on Apple code signing.</dd>
             </dl>
           </article>
 
@@ -285,15 +297,15 @@
           </article>
 
           <article class="case">
-            <span class="mono">Data tooling · Bitnine Global</span>
-            <h3>An extensible Oracle-to-PostgreSQL migration tool</h3>
+            <span class="mono">Open source · pgrecon</span>
+            <h3>Pricing an Oracle migration before anyone commits to it</h3>
             <dl>
               <dt>Problem</dt>
-              <dd>Moving schemas and data from Oracle to PostgreSQL by hand is slow and error-prone. The DDL syntax, data types and conventions all differ.</dd>
+              <dd>Oracle-to-PostgreSQL migrations go over budget because the expensive constructs (package-level state, autonomous transactions, interval partitioning, database links) surface late. Assessment tools usually want a live connection to a production database, which DBAs rightly refuse.</dd>
               <dt>Approach</dt>
-              <dd>A Python pipeline in three stages: extract the source DDL, transform it for the target schema, then move the data. One core sits behind both the CLI and the desktop GUI, and source-specific logic is kept separate so DB2 and MySQL can plug in.</dd>
+              <dd>pgrecon never connects. The DBA reviews and runs a read-only SQL*Plus script, and only files cross the boundary. The dump loads into a local SQLite inventory, and a rule engine with stable rule IDs queries it, so the same dump always gives the same findings. A converter then emits PostgreSQL DDL for what it can prove and a named refusal for what it can't, and DDL that fails to parse becomes a finding instead of being skipped.</dd>
               <dt>Result</dt>
-              <dd>Full migrations run from one tool, and supporting a new database means writing a module rather than changing the core.</dd>
+              <dd>An open-source tool on PyPI with 16 releases and CI. It ships a real Oracle 21c dump, so anyone can try it without an Oracle database.</dd>
             </dl>
           </article>
         </div>
@@ -303,21 +315,17 @@
         <h2>Experience</h2>
         <div>
           <div class="job">
-            <span class="mono">May 2026 – now</span>
+            <span class="mono">Dec 2024 – now</span>
             <div>
-              <h3>Full-Stack Developer <span>· Growth Rise Solutions, remote</span></h3>
+              <h3>Growth Rise Solutions <span>· remote</span></h3>
+              <h4>Full-Stack Developer <span>May 2026 – now</span></h4>
               <ul>
                 <li>Sole engineer and architect of Controla-VA: five Next.js portals on a NestJS API, PostgreSQL and Prisma.</li>
-                <li>Built an Electron desktop agent used on about 50 workstations; macOS and Linux ports in progress.</li>
+                <li>Built an Electron desktop agent used on about 50 workstations, with Windows and Linux builds; macOS is waiting on Apple signing.</li>
                 <li>Shipped AI features (RAG matching, vision classification, LLM document parsing) and a multi-currency finance platform.</li>
                 <li>Run staging and production on Docker, Caddy and Cloudflare, with CI/CD gated by automated tests.</li>
               </ul>
-            </div>
-          </div>
-          <div class="job">
-            <span class="mono">Dec 2024 – Apr 2026</span>
-            <div>
-              <h3>Python / AI Engineer <span>· Growth Rise Solutions, remote</span></h3>
+              <h4>Python / AI Engineer <span>Dec 2024 – Apr 2026</span></h4>
               <ul>
                 <li>Built multi-agent AI systems with CrewAI and LangChain, including custom memory and tool orchestration.</li>
                 <li>Connected agents to CRMs, messaging and data sources through event-driven n8n workflows.</li>
@@ -366,7 +374,7 @@
           <dt>Data</dt><dd>PostgreSQL, MySQL, Prisma, pgvector, schema design, query optimisation, database migration</dd>
           <dt>AI</dt><dd>OpenAI, Gemini Vision, RAG and embeddings, CrewAI, LangChain, LightFM</dd>
           <dt>Automation</dt><dd>n8n, event-driven workflows, third-party API integration</dd>
-          <dt>Desktop</dt><dd>Electron, native modules and FFI, Windows UI Automation (C#), macOS and Linux builds</dd>
+          <dt>Desktop</dt><dd>Electron on Windows, macOS and Linux, native modules and FFI, Windows UI Automation (C#)</dd>
           <dt>DevOps</dt><dd>Docker, GitHub Actions, Caddy, Cloudflare, Railway, Linux</dd>
           <dt>Testing</dt><dd>Jest, React Testing Library, Python test automation</dd>
           <dt>How I work</dt><dd>I own the architecture: service boundaries, data model and failure modes. Claude Code and Cursor handle much of the implementation. Tests, type checks and my own review decide what ships.</dd>
